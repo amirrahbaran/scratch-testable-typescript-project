@@ -7,7 +7,17 @@ export class Point {
         this.y = startY;
     }
 
-    get getX() {
+    public getX(): number {
         return this.x;
+    }
+
+    public getY(): number {
+        return this.y;
+    }
+
+    public getDistanceTo(otherPoint: Point): number {
+        let dx = this.x - otherPoint.getX();
+        let dy = this.y - otherPoint.getY();
+        return Math.sqrt(dx * dx + dy * dy);
     }
 }
